@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Citéfix</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Strategy
+  * Template URL: https://bootstrapmade.com/strategy-bootstrap-agency-template/
+  * Updated: May 09 2025 with Bootstrap v5.3.6
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo4.jpeg" alt="">
+        <h1 class="sitename">CITEFIX</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Acceuil</a></li>
+          <li><a href="signalements.html" class="active">Signalements</a></li>
+          <li><a href="signalement_detail.html">Ajouter un signalement</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="connexion.html">Connexion</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade">
+      <div class="container position-relative">
+        <h1>Signalements</h1>
+        <!-- <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p> -->
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Acceuil</a></li>
+            <li class="current">Signalements</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+  <!-- Signalements Section -->
+<section id="signalements" class="portfolio section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Signalements</h2>
+    <div><span>Liste des</span> <span class="description-title">problèmes signalés</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <!-- Filtres par statut -->
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+        <li data-filter="*" class="filter-active"><i class="bi bi-layers"></i> Tous</li>
+        <li data-filter=".filter-signale"><i class="bi bi-exclamation-circle"></i> Signalé</li>
+        <li data-filter=".filter-en-cours"><i class="bi bi-tools"></i> En cours</li>
+        <li data-filter=".filter-resolu"><i class="bi bi-check-circle"></i> Résolu</li>
+        <li data-filter=".filter-rejete"><i class="bi bi-x-circle"></i> Rejeté</li>
+      </ul>
+
+      <!-- Contenu des signalements -->
+      <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+        <!-- Exemple de signalement -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-signale">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/ndp.jpeg" class="img-fluid" alt="nid de poule" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Voirie - Signalé</div>
+                  <h3 class="entry-title">Nid de poule au carrefour Tokpa</h3>
+                  <div class="entry-links">
+                    <a href="assets/img/ndp.jpeg" class="glightbox"
+                      data-gallery="signalements-gallery"
+                      data-glightbox="title: Nid de poule au carrefour Tokpa; description: Signalé le 02 juin 2025 avec photo et géolocalisation.">
+                      <i class="bi bi-arrows-angle-expand"></i>
+                    </a>
+                    <a href="signalement-details.html?id=123">
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div><!-- End Signalement Item -->
+
+        <!-- Autre exemple (résolu) -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-resolu">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/lampadaire.jpeg" class="img-fluid" alt="lampe réparée" loading="lazy">
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Éclairage - Résolu</div>
+                  <h3 class="entry-title">Lampadaire cassé devant l'UAC</h3>
+                  <div class="entry-links">
+                    <a href="assets/img/lampadaire.jpeg" class="glightbox"
+                      data-gallery="signalements-gallery"
+                      data-glightbox="title: Lampadaire réparé; description: Intervention terminée, validée par le citoyen.">
+                      <i class="bi bi-arrows-angle-expand"></i>
+                    </a>
+                    <a href="signalement-details.html?id=456">
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div><!-- End Signalement Item -->
+
+        <!-- Ajoute ici d'autres signalements selon le même modèle -->
+         <!-- Signalement 3 - En cours -->
+<div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-en-cours">
+  <article class="portfolio-entry">
+    <figure class="entry-image">
+      <img src="assets/img/signalements/dechets-abandonnes.jpg" class="img-fluid" alt="Déchets abandonnés" loading="lazy">
+      <div class="entry-overlay">
+        <div class="overlay-content">
+          <div class="entry-meta">Déchets - Intervention en cours</div>
+          <h3 class="entry-title">Tas de déchets derrière le marché</h3>
+          <div class="entry-links">
+            <a href="assets/img/signalements/dechets-abandonnes.jpg" class="glightbox"
+              data-gallery="signalements-gallery"
+              data-glightbox="title: Déchets abandonnés; description: Intervention en cours par les services d’hygiène.">
+              <i class="bi bi-arrows-angle-expand"></i>
+            </a>
+            <a href="signalement-details.html?id=789">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </article>
+</div>
+
+<!-- Signalement 4 - Rejeté -->
+<div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-rejete">
+  <article class="portfolio-entry">
+    <figure class="entry-image">
+      <img src="assets/img/signalements/fausse-alarme.jpg" class="img-fluid" alt="Fausse alarme" loading="lazy">
+      <div class="entry-overlay">
+        <div class="overlay-content">
+          <div class="entry-meta">Sécurité - Rejeté</div>
+          <h3 class="entry-title">Fausse alerte de bagarre</h3>
+          <div class="entry-links">
+            <a href="assets/img/signalements/fausse-alarme.jpg" class="glightbox"
+              data-gallery="signalements-gallery"
+              data-glightbox="title: Fausse alerte; description: Aucune anomalie constatée par la police municipale.">
+              <i class="bi bi-arrows-angle-expand"></i>
+            </a>
+            <a href="signalement-details.html?id=910">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </article>
+</div>
+
+<!-- Signalement 5 - Résolu -->
+<div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-resolu">
+  <article class="portfolio-entry">
+    <figure class="entry-image">
+      <img src="assets/img/signalements/trou-bouche.jpg" class="img-fluid" alt="Trou réparé" loading="lazy">
+      <div class="entry-overlay">
+        <div class="overlay-content">
+          <div class="entry-meta">Voirie - Résolu</div>
+          <h3 class="entry-title">Réparation du trou route de l’aéroport</h3>
+          <div class="entry-links">
+            <a href="assets/img/signalements/trou-bouche.jpg" class="glightbox"
+              data-gallery="signalements-gallery"
+              data-glightbox="title: Réparation terminée; description: Intervention achevée et confirmée par le citoyen.">
+              <i class="bi bi-arrows-angle-expand"></i>
+            </a>
+            <a href="signalement-details.html?id=111">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </article>
+</div>
+
+<!-- Signalement 6 - Signalé -->
+<div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-signale">
+  <article class="portfolio-entry">
+    <figure class="entry-image">
+      <img src="assets/img/signalements/feu-trafic-en-panne.jpg" class="img-fluid" alt="Feu de signalisation en panne" loading="lazy">
+      <div class="entry-overlay">
+        <div class="overlay-content">
+          <div class="entry-meta">Signalisation - Signalé</div>
+          <h3 class="entry-title">Feu de circulation défectueux</h3>
+          <div class="entry-links">
+            <a href="assets/img/signalements/feu-trafic-en-panne.jpg" class="glightbox"
+              data-gallery="signalements-gallery"
+              data-glightbox="title: Feu défectueux; description: Le feu reste rouge dans toutes les directions.">
+              <i class="bi bi-arrows-angle-expand"></i>
+            </a>
+            <a href="signalement-details.html?id=222">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </figure>
+  </article>
+</div>
+
+
+      </div><!-- End Signalements Container -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Signalements Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Strategy</strong> <span>All Rights Reserved</span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
