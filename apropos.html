@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - CitéFix</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+    .about-section {
+      padding: 80px 0;
+    }
+    .about-section h2 {
+      color: #ffc107;
+      font-weight: 700;
+    }
+    .highlight {
+      color: #ffc107;
+    }
+    .card-about {
+      background-color: #1a1a1a;
+      border: none;
+      color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(255, 193, 7, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo4.jpeg" alt="">
+        <h1 class="sitename">CITEFIX</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="report-details.html">Signalements</a></li>
+          <li><a href="ajouter-un-signalement.html">Ajouter un signalement</a></li>
+          <li><a href="apropos.html" class="active">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="connexion.html">Connexion</a>
+    </div>
+  </header>
+
+  <main class="main" style="margin-top: 90px;">
+    <section class="about-section text-center">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8">
+            <h2>À propos de <span class="highlight">CitéFix</span></h2>
+            <p class="lead mt-4">CitéFix est une plateforme citoyenne permettant de <strong>signaler les problèmes urbains</strong> dans votre quartier et de <strong>suivre leur résolution</strong> par les autorités locales. Ensemble, améliorons notre cadre de vie !</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card card-about p-4 h-100">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-eye text-warning display-6 me-3"></i>
+                <h5 class="mb-0">Notre vision</h5>
+              </div>
+              <p>Un environnement urbain propre, sûr et réactif grâce à la participation citoyenne et une gestion transparente des signalements.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card card-about p-4 h-100">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-bullseye text-warning display-6 me-3"></i>
+                <h5 class="mb-0">Notre mission</h5>
+              </div>
+              <p>Mettre en relation les citoyens et les autorités locales pour une intervention rapide et efficace sur les problèmes de la ville.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card card-about p-4 h-100">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-people text-warning display-6 me-3"></i>
+                <h5 class="mb-0">Notre communauté</h5>
+              </div>
+              <p>Des citoyens engagés qui signalent activement les dysfonctionnements pour améliorer la vie dans leurs quartiers.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card card-about p-4 h-100">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-shield-lock text-warning display-6 me-3"></i>
+                <h5 class="mb-0">Confiance & transparence</h5>
+              </div>
+              <p>Chaque signalement est tracé et consultable pour garantir une transparence totale des actions entreprises.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mt-5">
+    <div class="container text-center text-white">
+      <p>© 2025 <strong>CitéFix</strong> — Tous droits réservés</p>
+      <p>Réalisé par l'équipe IFRI</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ | CitéFix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .faq-section {
+      padding: 120px 0 60px;
+    }
+    .faq-title {
+      color: #ffc107;
+      font-weight: 700;
+      font-size: 2.8rem;
+    }
+    .faq-intro {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .accordion-button {
+      background: #1e1e1e;
+      color: #ffc107;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border: none;
+    }
+    .accordion-button.collapsed {
+      color: #f8f9fa;
+      background: #1a1a1a;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+    .accordion-body {
+      background-color: #151515;
+      color: #e0e0e0;
+      border-top: 1px solid #333;
+    }
+    .faq-card {
+      background: #1b1b1b;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(255, 193, 7, 0.1);
+    }
+    .faq-footer-link {
+      display: inline-block;
+      margin-top: 30px;
+      font-weight: 500;
+      color: #ffc107;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <img src="assets/img/logo4.jpeg" alt="">
+      <h1 class="sitename">CITEFIX</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+        <li><a href="new-report.html">Ajouter un signalement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a class="btn-getstarted" href="connexion.html">Connexion</a>
+  </div>
+</header>
+
+<main class="main faq-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="faq-title">Foire Aux Questions</h2>
+        <p class="faq-intro">Vous avez une question concernant CitéFix ? Consultez les réponses ci-dessous.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="faq-card">
+          <div class="accordion accordion-flush" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Qu'est-ce que CitéFix ?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  CitéFix est une plateforme citoyenne qui vous permet de signaler facilement les problèmes urbains dans votre quartier afin que les autorités compétentes puissent intervenir rapidement.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Comment puis-je envoyer un signalement ?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Il suffit de cliquer sur "Ajouter un signalement", remplir le formulaire en décrivant le problème, sa localisation, ajouter une photo si possible, puis cliquer sur "Envoyer".
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Qui peut voir mon signalement ?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Les signalements sont visibles par les autorités locales responsables ainsi que sur le tableau public de la plateforme, sauf si vous choisissez l’option de confidentialité.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  Vais-je recevoir un retour après avoir signalé ?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Oui, si vous laissez vos coordonnées, vous recevrez un suivi par email ou téléphone lorsque le statut de votre signalement change.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Est-ce que le service est gratuit ?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolument. CitéFix est un service gratuit mis à la disposition des citoyens pour améliorer leur cadre de vie.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <a href="contact.html" class="faq-footer-link">Vous n'avez pas trouvé votre réponse ? Contactez-nous</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer id="footer" class="footer mt-5">
+  <div class="container text-center">
+    <p>© <strong>CitéFix</strong> - Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

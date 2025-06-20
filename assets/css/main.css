@@ -3768,6 +3768,33 @@ section,
   .service-details .service-header .lead {
     font-size: 16px;
   }
+.bg-dark-form {
+  background-color: #1a1a1a !important;
+  color: #fff;
+  border-radius: 8px;
+}
+.bg-dark-form .form-label,
+.bg-dark-form .form-control,
+.bg-dark-form .form-check-label,
+.bg-dark-form .form-select {
+  color: #fff;
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+.bg-dark-form .form-control::placeholder {
+  color: #ccc;
+}
+.bg-dark-form .form-select option {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+#hero-ajout {
+  margin-top: 190px; /* ajuste selon la hauteur de ton header */
+  padding-top: 90px;
+  padding-bottom: 40px;
+}
+
+
 }
 
 /*--------------------------------------------------------------

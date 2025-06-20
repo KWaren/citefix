@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Mêmes balises meta et liens que dans votre template existant -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Citéfix - Ajouter un signalement</title>
+  
+  <!-- Inclure les mêmes liens CSS que votre template -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="ajout-signalement-page">
+
+  <!-- Header identique à votre template -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo4.jpeg" alt="">
+        <h1 class="sitename">CITEFIX</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="report-details.html">Signalement</a></li>
+          <li><a href="ajouter-un-signalement.html" class="active">Ajouter un signalement</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="connexion.html">Connexion</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section pour la page Ajout -->
+    <section id="hero-ajout" class="hero-ajout section mt-5 py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center" data-aos="fade-up">
+            <h1 class="mb-2">Ajouter un signalement</h1>
+            <p class="lead">Participez à l'amélioration de votre quartier en signalant un problème</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulaire de signalement -->
+    <section id="formulaire-signalement" class="formulaire-signalement section ">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow-sm border-0 dark-background">
+              <div class="card-body p-4 p-md-5">
+                <form id="formSignalement" novalidate>
+                  <!-- Type de problème -->
+                  <div class="mb-4">
+                    <label for="typeProbleme" class="form-label fw-bold">Type de problème <span class="text-danger">*</span></label>
+                    <select class="form-select form-select-lg" id="typeProbleme" required>
+                      <option value="" selected disabled>-- Sélectionnez --</option>
+                      <option value="voirie">Problème de voirie (nid de poule, trottoir endommagé...)</option>
+                      <option value="dechets">Déchets ou insalubrité</option>
+                      <option value="eclairage">Éclairage public défectueux</option>
+                      <option value="eau">Problème d'eau ou d'égout</option>
+                      <option value="autre">Autre problème</option>
+                    </select>
+                    <div class="invalid-feedback">Veuillez sélectionner un type de problème</div>
+                  </div>
+
+                  <!-- Localisation -->
+                  <div class="mb-4">
+                    <label for="localisation" class="form-label fw-bold">Localisation <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+                      <input type="text" class="form-control form-control-lg" id="localisation" placeholder="Adresse approximative ou point de repère" required>
+                      <button class="btn btn-outline-primary" type="button" id="btnLocalisation">
+                        <i class="bi bi-crosshair"></i> Me localiser
+                      </button>
+                    </div>
+                    <small class="text-muted">Cliquez sur la carte ci-dessous pour préciser l'emplacement exact</small>
+                    <div class="invalid-feedback">Veuillez indiquer une localisation</div>
+                  </div>
+
+                  <!-- Carte interactive -->
+                  <div class="mb-4 border rounded-3" style="height: 250px; background-color: #f8f9fa;">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                      <div class="text-center">
+                        <i class="bi bi-map text-muted" style="font-size: 2rem;"></i>
+                        <p class="mt-2">Carte interactive - Cliquez pour marquer l'emplacement</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Description -->
+                  <div class="mb-4">
+                    <label for="description" class="form-label fw-bold">Description <span class="text-danger">*</span></label>
+                    <textarea class="form-control form-control-lg" id="description" rows="4" placeholder="Décrivez le problème en détails..." required></textarea>
+                    <div class="invalid-feedback">Veuillez décrire le problème</div>
+                  </div>
+
+                  <!-- Téléchargement photo -->
+                  <div class="mb-4">
+                    <label for="photo" class="form-label fw-bold">Photo du problème</label>
+                    <div class="file-upload-wrapper">
+                      <input type="file" class="form-control form-control-lg" id="photo" accept="image/*">
+                      <label for="photo" class="file-upload-label">
+                        <i class="bi bi-cloud-arrow-up"></i> Choisir une photo...
+                      </label>
+                      <small class="text-muted d-block">Formats acceptés : JPG, PNG (max 5MB)</small>
+                    </div>
+                    <div id="preview-container" class="mt-3 d-none">
+                      <img id="preview-image" src="#" alt="Aperçu de la photo" class="img-thumbnail" style="max-height: 200px;">
+                      <button type="button" class="btn btn-sm btn-danger ms-2" id="remove-photo">
+                        <i class="bi bi-trash"></i> Supprimer
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Coordonnées (optionnel) -->
+                  <div class="mb-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="contactCheck">
+                      <label class="form-check-label" for="contactCheck">
+                        Je souhaite être contacté pour un suivi
+                      </label>
+                    </div>
+                    <div id="contactFields" class="mt-3" style="display: none;">
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control form-control-lg" id="email" placeholder="votre@email.com">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="telephone" class="form-label">Téléphone</label>
+                          <input type="tel" class="form-control form-control-lg" id="telephone" placeholder="00229 XX XX XX XX">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Boutons de soumission -->
+                  <div class="d-grid gap-3 d-md-flex justify-content-md-end mt-4">
+                    <button type="reset" class="btn btn-outline-secondary btn-lg">
+                      <i class="bi bi-x-circle me-2"></i> Annuler
+                    </button>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                      <i class="bi bi-send-check me-2"></i> Envoyer le signalement
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer identique à votre template -->
+  <footer id="footer" class="footer">
+    <div class="container copyright text-center mt-4">
+      <p>© 2025<span> Copyright</span> <strong class="px-1 sitename">CitéFix</strong> <span> - Tous droits réservés</span></p>
+      <div class="credits">
+        Réalisé par <a href="https://bootstrapmade.com/">IFRI</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts identiques à votre template -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

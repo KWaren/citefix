@@ -212,4 +212,51 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * pour la partie carte
+   */
+
+  // Afficher/masquer les champs de contact
+    document.getElementById('contactCheck').addEventListener('change', function() {
+      document.getElementById('contactFields').style.display = this.checked ? 'block' : 'none';
+    });
+
+    // Aperçu de l'image téléchargée
+    document.getElementById('photo').addEventListener('change', function(e) {
+      const previewContainer = document.getElementById('preview-container');
+      const previewImage = document.getElementById('preview-image');
+      
+      if (this.files && this.files[0]) {
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+          previewImage.src = e.target.result;
+          previewContainer.classList.remove('d-none');
+        }
+        
+        reader.readAsDataURL(this.files[0]);
+      }
+    });
+
+    // Supprimer l'aperçu
+    document.getElementById('remove-photo').addEventListener('click', function() {
+      document.getElementById('photo').value = '';
+      document.getElementById('preview-container').classList.add('d-none');
+    });
+
+    // Validation du formulaire
+    (function() {
+      'use strict';
+      
+      const form = document.getElementById('formSignalement');
+      
+      form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        
+        form.classList.add('was-validated');
+      }, false);
+    })();
 })();

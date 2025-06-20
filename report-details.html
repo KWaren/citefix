@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détail Signalement - CitéFix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+    }
+    .bg-dark-card {
+      background-color: #1e1e1e;
+      color: #fff;
+      border-radius: 12px;
+    }
+    .map-container {
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+ <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <img src="assets/img/logo4.jpeg" alt="">
+      <h1 class="sitename">CITEFIX</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="admin-dashboard.html" class="active">Tableau de bord</a></li>
+      </ul>
+    </nav>
+    <a class="btn-getstarted" href="connexion.html">Déconnexion</a>
+  </div>
+</header>
+
+<main class="main" style="margin-top: 90px;">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="p-4 shadow bg-dark-card">
+          <h3 class="text-warning mb-3"><i class="bi bi-tools me-2"></i> Voirie : trou dangereux</h3>
+          <p><strong>Lieu :</strong> Rue 10, Cotonou</p>
+          <p><strong>Date :</strong> 16 juin 2025</p>
+          <p><strong>Statut :</strong> <span class="badge bg-warning text-dark">En attente</span></p>
+          <p><strong>Description :</strong> Gros trou au milieu de la chaussée, risque pour les motos.</p>
+          <img src="assets/img/voirie2.jpeg" class="img-fluid rounded shadow mb-3" alt="voirie" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="p-4 shadow bg-dark-card">
+          <h3 class="text-success mb-3"><i class="bi bi-trash-fill me-2"></i> Ordures : tas non ramassé</h3>
+          <p><strong>Lieu :</strong> Rue Gbegamey</p>
+          <p><strong>Date :</strong> 15 juin 2025</p>
+          <p><strong>Statut :</strong> <span class="badge bg-primary">En cours</span></p>
+          <p><strong>Description :</strong> Tas d'ordures depuis 3 jours, odeur nauséabonde.</p>
+          <img src="assets/img/ordures1.jpg" class="img-fluid rounded shadow mb-3" alt="ordures" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="p-4 shadow bg-dark-card">
+          <h3 class="text-info mb-3"><i class="bi bi-lightbulb-fill me-2"></i> Éclairage : lampadaire éteint</h3>
+          <p><strong>Lieu :</strong> Carrefour Dantokpa</p>
+          <p><strong>Date :</strong> 14 juin 2025</p>
+          <p><strong>Statut :</strong> <span class="badge bg-success">Résolu</span></p>
+          <p><strong>Description :</strong> Lampadaire HS depuis plusieurs nuits, insécurité accrue.</p>
+          <img src="assets/img/eclairage3.jpg" class="img-fluid rounded shadow mb-3" alt="eclairage" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="p-4 shadow bg-dark-card">
+          <h3 class="text-primary mb-3"><i class="bi bi-droplet-fill me-2"></i> Fuite d'eau</h3>
+          <p><strong>Lieu :</strong> Quartier Zongo</p>
+          <p><strong>Date :</strong> 13 juin 2025</p>
+          <p><strong>Statut :</strong> <span class="badge bg-secondary">En attente</span></p>
+          <p><strong>Description :</strong> Jet d'eau constant dans la ruelle, réparé hier.</p>
+          <img src="assets/img/fuite1.jpg" class="img-fluid rounded shadow mb-3" alt="fuite d'eau" />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer mt-5">
+  <div class="container text-center">© CitéFix - Tous droits réservés</div>
+</footer>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>

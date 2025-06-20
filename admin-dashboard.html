@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Admin - Signalements | CitéFix</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="assets/js/admin-dashboard.js" defer></script>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+    }
+    .table thead {
+      background-color: #1f1f1f;
+      color: #ffc107;
+    }
+    .table tbody tr {
+      background-color: #222;
+      color: #fff;
+    }
+    .table-hover tbody tr:hover {
+      background-color: #333;
+    }
+    .status-badge {
+      padding: 0.35em 0.75em;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .status-En\ attente {
+      background-color: #ffc107;
+      color: #000;
+    }
+    .status-En\ cours {
+      background-color: #0dcaf0;
+      color: #000;
+    }
+    .status-Résolu {
+      background-color: #198754;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <img src="assets/img/logo4.jpeg" alt="">
+      <h1 class="sitename">CITEFIX</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="admin-dashboard.html" class="active">Tableau de bord</a></li>
+        <li><a href="index.html">Retour à l'accueil</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a class="btn-getstarted" href="connexion.html">Déconnexion</a>
+  </div>
+</header>
+
+<main class="main" style="margin-top: 90px;">
+  <div class="container">
+    <h2 class="text-center text-warning mb-4">Tableau de bord - Administration</h2>
+
+    <!-- Filtre -->
+    <div class="d-flex justify-content-end mb-3">
+      <select id="filter-status" class="form-select w-auto bg-dark text-white border-warning">
+        <option value="">Filtrer par statut</option>
+        <option value="En attente">En attente</option>
+        <option value="En cours">En cours</option>
+        <option value="Résolu">Résolu</option>
+      </select>
+    </div>
+
+    <!-- Tableau des signalements -->
+    <div class="table-responsive shadow p-4 rounded-4" style="background-color: #1b1b1b;">
+      <table class="table table-hover align-middle">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Type</th>
+            <th>Lieu</th>
+            <th>Date</th>
+            <th>Statut</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="report-list">
+          <tr><td>1</td><td>Ordures</td><td>Rue des Palmiers</td><td>15/06/2025</td><td><span class="status-badge status-En\ attente">En attente</span></td><td><a href="report-details.html?id=1" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a> <button class="btn btn-sm btn-success"><i class="bi bi-check2-circle"></i></button> <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button></td></tr>
+          <tr><td>2</td><td>Graffiti</td><td>Avenue Steinmetz</td><td>12/06/2025</td><td><span class="status-badge status-En\ cours">En cours</span></td><td><a href="report-details.html?id=2" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a> <button class="btn btn-sm btn-success"><i class="bi bi-check2-circle"></i></button> <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button></td></tr>
+          <tr><td>3</td><td>Éclairage</td><td>Place de l'Indépendance</td><td>10/06/2025</td><td><span class="status-badge status-Résolu">Résolu</span></td><td><a href="report-details.html?id=3" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a> <button class="btn btn-sm btn-success disabled"><i class="bi bi-check2-circle"></i></button> <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button></td></tr>
+          <tr><td>4</td><td>Voirie</td><td>Rond-point Vèdoko</td><td>08/06/2025</td><td><span class="status-badge status-En\ attente">En attente</span></td><td><a href="report-details.html?id=4" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a> <button class="btn btn-sm btn-success"><i class="bi bi-check2-circle"></i></button> <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button></td></tr>
+          <tr><td>5</td><td>Déchets</td><td>Marché Dantokpa</td><td>06/06/2025</td><td><span class="status-badge status-En\ cours">En cours</span></td><td><a href="report-details.html?id=5" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a> <button class="btn btn-sm btn-success"><i class="bi bi-check2-circle"></i></button> <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button></td></tr>
+          <tr><td>6</td><td>Nuisances sonores</td><td>Quartier Sainte-Cécile</td><td>04/06/2025</td><td><span class="status-badge status-Résolu">Résolu</span></td><td><a href="report-details.html?id=6" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a> <button class="btn btn-sm btn-success disabled"><i class="bi bi-check2-circle"></i></button> <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button></td></tr>
+          <tr><td>6</td><td>Rue dégradée</td><td>Quartier Zongo</td><td>09/06/2025</td><td><span class="status-badge status-En\ attente">En attente</span></td><td><a href="report-details.html?id=6" class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></a> <button class="btn btn-sm btn-success disabled"><i class="bi bi-check2-circle"></i></button> <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button></td></tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer id="footer" class="footer mt-5">
+  <div class="container text-center">
+    <p>© <strong>CitéFix</strong> - Tous droits réservés</p>
+  </div>
+</footer>
+
+</body>
+</html>
